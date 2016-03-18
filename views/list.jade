@@ -1,0 +1,26 @@
+extends layout
+block head
+    nav.navbar.navbar-default
+        .container
+            .navbar-header
+               button.navbar-toggle(type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar")
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='/') GITD.ru
+            #navbar.navbar-collapse.collapse.navbar-collapse(aria-expanded="true")
+                ul.nav.navbar-nav
+                    li 
+                        a(href="/list") Список фильмов
+                    li
+                        a.clear-all(href="javascript:void(0)") Очистить все
+                    
+block content
+   .container
+        each item in listVideo
+            .embed-responsive.embed-responsive-16by9
+                .embed-responsive-item
+                    video(controls autoplay name='media')
+                        source(src=item)
+    

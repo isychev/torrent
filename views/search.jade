@@ -1,0 +1,33 @@
+extends layout
+block head
+    nav.navbar.navbar-default
+        .container
+            .navbar-header
+               button.navbar-toggle(type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar")
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='/') GITD.ru
+            #navbar.navbar-collapse.collapse.navbar-collapse(aria-expanded="true")
+                ul.nav.navbar-nav
+                    li 
+                        a(href="/list") Список фильмов
+                    li
+                        a.clear-all(href="javascript:void(0)") Очистить все
+                    
+block content
+   .container
+    .b-search.form-group
+        label.h2 Введите название фильма
+        .row
+            .col-xs-8
+                input.b-search-input.form-control.input-lg(type='text')
+            button.btn.btn-primary.btn-lg.col-xs-4.btn-search Поиск
+        .row
+            .col-sm-12
+                .progress.hidden
+                    .progress-bar.progress-bar-striped.active
+    table.table.table-hover 
+            
+    

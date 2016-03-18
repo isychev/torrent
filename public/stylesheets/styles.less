@@ -1,0 +1,99 @@
+body.front {
+    background: url('../images/micro_carbon.png');
+}
+:active, :focus {
+    outline: 0;
+}
+/** Font-Face **/
+@font-face {
+    font-family: "FontAwesome";
+    src: url("fonts/fontawesome-webfont.eot");
+    src: url("fonts/fontawesome-webfont.eot?#iefix") format('eot'), 
+        url("fonts/fontawesome-webfont.woff") format('woff'), 
+        url("fonts/fontawesome-webfont.ttf") format('truetype'), 
+        url("fonts/fontawesome-webfont.svg#FontAwesome") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/****************************  power button **********************************/
+.power-button {
+    top:50%;
+    left:50%;
+    margin-left: -135px;
+    margin-top: -135px;
+    text-decoration: none!important;
+    font-family: "FontAwesome";
+    text-shadow: 0px 1px 1px rgba(250,250,250,0.1);
+    font-size: 120pt;
+    display: inline-block;
+    position: absolute;
+    box-shadow: 0px 3px 0px 0px rgb(34,34,34),
+        0px 7px 10px 0px rgb(17,17,17),
+        inset 0px 1px 1px 0px rgba(250, 250, 250, .2), 
+        inset 0px -12px 35px 0px rgba(0, 0, 0, .5);
+    width: 270px;
+    height: 270px;
+    border: 0;
+    color: rgb(37,37,37);
+    border-radius: 235px;
+    text-align: center;
+    line-height: 269px;
+    background-color: rgb(83,87,93);
+    transition: color 350ms ease, text-shadow 350ms;
+    -o-transition: color 350ms ease, text-shadow 350ms;
+    -moz-transition: color 350ms ease, text-shadow 350ms;
+    -webkit-transition: color 350ms ease, text-shadow 350ms;
+    &:hover,
+        &:focus{
+        color:#2E3338;
+        text-shadow: 0px 0px 3px rgb(250,250,250);
+    }
+    &:before {
+        content: "";
+        width: 280px;
+        height: 280px;
+        display: block;
+        z-index: -2;
+        position: absolute;
+        background-color: rgb(26,27,29);
+        left: -5px;
+        top: -2px;
+        border-radius: 240px;
+        box-shadow: 0px 1px 0px 0px rgba(250,250,250,0.1), 
+            inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    &:active {
+        box-shadow: 0px 0px 0px 0px rgb(34,34,34),
+            0px 3px 7px 0px rgb(17,17,17),
+            inset 0px 1px 1px 0px rgba(250, 250, 250, .2), 
+            inset 0px -10px 35px 5px rgba(0, 0, 0, .5);
+        background-color: rgb(83,87,93);
+    }
+    &:target {
+        box-shadow: 0px 0px 0px 0px rgb(34,34,34),
+            0px 3px 7px 0px rgb(17,17,17), 
+            inset 0px 1px 1px 0px rgba(250, 250, 250, .2), 
+            inset 0px -10px 35px 5px rgba(0, 0, 0, .5);
+        background-color: rgb(83,87,93);
+        color: #fff;
+        text-shadow: 0px 0px 3px rgb(250,250,250);
+    }
+    &:active:before,
+        &:target:before {
+        top: -5px;
+        background-color: rgb(26,27,29);
+        box-shadow: 0px 1px 0px 0px rgba(250,250,250,0.1), 
+            inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+}
+/*************************  end power button **********************************/
+.b-search{
+    margin-top: 50px;
+    &-label{
+        color:#fff;
+    }
+    &-input{
+        color:#lue;
+        font-size:25px;
+    }
+}

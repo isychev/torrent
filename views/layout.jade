@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+
+    link(rel='stylesheet', href='/stylesheets/vendors/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/styles.css')
+
+  body(class=htmlClass )
+    block head
+    block content
+  script(src='https://code.jquery.com/jquery-1.12.1.min.js')
+  script(src='/javascripts/vendors/bootstrap.min.js' integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
+  script(src='/javascripts/scripts.js')
